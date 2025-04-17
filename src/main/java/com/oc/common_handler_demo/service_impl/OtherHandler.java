@@ -12,6 +12,7 @@ public class OtherHandler implements HandlerService {
         System.out.println("Other-Handler is been executed");
         Integer otherCounter = (Integer) contextData.getOrDefault("otherCounter",0);
         contextData.put("otherCounter",otherCounter+1);
+        contextData.put("Handler","OtherHandler");
         return contextData;
     }
 }

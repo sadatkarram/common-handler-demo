@@ -19,6 +19,7 @@ public class CommonHandler implements HandlerService {
         String counterKey = counterMap.get(contextData.get("activityName").toString());
         Integer counterValue = (Integer) contextData.getOrDefault(counterKey,0);
         contextData.put(counterKey,counterValue+1);
+        contextData.put("Handler","CommonHandler");
         return contextData;
     }
 }
